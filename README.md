@@ -16,7 +16,7 @@
 **1. 篩選功能與官網相同**
 
     (1). 官方篩選畫面 
-    ![](https://i.imgur.com/sQiLa4X.png)
+   ![](https://i.imgur.com/sQiLa4X.png)
     (2). 自動下載工具篩選程式碼
 
 ``` python=
