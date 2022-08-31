@@ -1,7 +1,9 @@
 import requests as res
 import pandas as pd 
 from bs4 import BeautifulSoup
-#from  functions import downloadPDF,getPage
+from fake_useragent import UserAgent # 隨機user-agent 躲掉防爬蟲機制
+
+#from  functions import downloadPDF,getPage # 因為要打包成.exe 只好把funct寫在同一.py
  
 
 # 宣告下載PDF檔案的function
@@ -58,7 +60,8 @@ for i in range(1,total_page+1):
     #print("目前位於第:"+str(i)+"頁")
     page = str(i)
     url = 'http://goldensun.get.com.tw/exam/List.aspx?iPageNo='+page+'&sFilter='+set_keyword+'&sFilterDate='+set_year+'&sFilterType='+set_filter
-    r = res.get(url)
+    user_agent = UserAgent() # 隨機user-agent 躲掉防爬蟲機制
+    r = res.get(url, headers={ 'user-agent': user_agent.random })
 
     # 利用bs4解析原始碼
     soup = BeautifulSoup(r.text,"html.parser")
