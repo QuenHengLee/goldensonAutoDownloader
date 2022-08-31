@@ -13,7 +13,7 @@
 
 **3. py-to-exe 套件:** 將原始.py檔案打包成.exe檔案方便提供給其他需要的人使用。
 
-**4. fake_useragent:** 對伺服器發出Request時附帶隨機的user-agent，避免被對方網站阻擋爬蟲。
+**4. fake_useragent套件:** 對伺服器發出Request時附帶隨機的user-agent，避免被對方網站阻擋爬蟲。
 
 ### 三、程式碼簡介
 **1. 篩選功能與官網相同**
