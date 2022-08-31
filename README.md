@@ -12,6 +12,8 @@
 **2. Request 套件:** 模擬瀏覽器發出request至高點官網伺服器。
 
 **3. py-to-exe 套件:** 將原始.py檔案打包成.exe檔案方便提供給其他需要的人使用。
+**4. fake_useragent:** 對伺服器發出Request時附帶隨機的user-agent，避免被對方網站阻擋爬蟲。
+
 ### 三、程式碼簡介
 **1. 篩選功能與官網相同**
 
@@ -62,10 +64,7 @@ def downloadPDF(group,subject,year,link):
 **2.利用爬蟲程式自動下載至本機端結果**
 ![](https://i.imgur.com/wkAMdQj.png)
 **3. 實際操作本系統影片(點即可查看影片)**
-https://www.youtube.com/watch?v=0fN0Ja65dFk&feature=emb_logo
-[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/0fN0Ja65dFk/0.jpg)](https://www.youtube.com/watch?v=0fN0Ja65dFk)
- 
-
+https://www.youtube.com/watch?v=XRSKefVVugI&feature=emb_title
 
 
  
