@@ -7,8 +7,9 @@ from bs4 import BeautifulSoup
 # 宣告下載PDF檔案的function
 def downloadPDF(group,subject,year,link):
     response = res.get(link) # 先發出第一階段的請求(網址結尾不是.pdf)(會透過java script跳轉)
-    pdf_url = response.text.replace("<script language=JavaScript>top.location.href='","").replace("';</script>","") # 擷取真正的.pdf網址
-    print(pdf_url)
+    #pdf_url = response.text.replace("<script language=JavaScript>top.location.href='","").replace("';</script>","") # 擷取真正的.pdf網址
+    pdf_url = response.url # 修正BUG
+    #print(new_url)
     response = res.get(pdf_url)
     file_name = "["+year+"]["+group+"]["+subject+"].pdf"
     file_name = file_name.replace('\r','').replace('\n','')
